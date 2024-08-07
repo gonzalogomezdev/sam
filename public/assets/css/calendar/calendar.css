@@ -1,0 +1,332 @@
+#calendarContent {
+    margin: 0px auto;
+    width: 95%;
+    /* border: 1px solid red; */
+}
+
+#btnAbrirModalCalendar {
+    display: none;
+}
+
+.modalCalendar {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-contentCalendar {
+    text-align: center;
+    background-color: #fefefe;
+    margin: 3% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+#tablaTurnosPacientesCalendar tbody tr td {
+    text-align: center;
+    padding: 5px; 
+}
+
+.close {
+    text-align: end;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0px 0px 15px 0px; /* top right bottom left */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.input-selectCalendar {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+    /* border: 1px solid green; */
+}
+
+.select2-container {
+    text-align: left;
+    width: 70% !important;
+}
+
+.modal-select2 {
+    z-index: 999999;
+    /* border: 1px solid red; */
+}
+
+.buttonOptions-container {
+    display: inline-block; 
+    margin: 20px 0px 15px 0px; 
+}
+
+.buttonOptions-container #btnGuardarHoras {
+    display: none;
+}
+
+.intervalMinute {
+    margin-top: 15px;
+}
+
+#intervalModal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.intervalModalContent {
+    text-align: center;
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px 20px 20px 30px;
+    width: 30%;
+}
+
+.closeIntervalModal {
+    display: block; /* Cambiamos a display: block */
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    padding-right: 5px;
+    float: right; /* Lo movemos a la derecha */
+}
+
+.closeIntervalModal:hover,
+.closeIntervalModal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.containerForm {
+    margin: 30px 0px 0px 0px;
+}
+
+.containerForm h3 {
+    padding: 5px 5px 10px 5px;
+}
+
+.containerMorning {
+    margin: 10px 0px;
+}
+
+.containerAfternoon {
+    margin: 10px 0px;
+}
+
+.containerButton {
+    margin: 15px 0px 5px 0px;
+    padding: 0px 0px 20px 0px;
+}
+
+.disponible {
+    background-color: white !important; 
+}
+
+.no-disponible {
+    background-color: #ffcccc; 
+}
+
+.turno-usuario {
+    background-color: #e0e0e0; 
+}
+
+.blocked {
+    background-color: #f2f2f2; 
+    opacity: 0.5; 
+    pointer-events: none;
+}
+
+.seleccionado {
+    background-color: #eaeaea !important;
+};
+
+#reference-container {}
+.reference-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 43px 0px 20px 0px;
+}
+
+.color-reference-appointment {
+    width: 1.5rem; 
+    height: 1.5rem;
+    border: 1px solid black;
+}
+
+.state {
+    margin-inline-start: 10px;
+    margin-inline-end: 25px;
+}
+
+/* .fc-view .fc-body .fc-widget-content .fc-scroller .fc-day-grid .fc-row {
+    border: 1px solid red;
+    min-height: 4em;
+} */
+
+.weekdays-container {
+    margin-top: 15px;
+}
+
+.disabled-table {
+    pointer-events: none; /* Deshabilita todos los eventos de puntero */
+    opacity: 0.6; /* Reduce la opacidad para indicar que está desactivada */
+}
+
+.disabled-buttons {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.fc-scroller.fc-day-grid-container {
+    overflow: hidden scroll !important;
+    height: 60vh !important;
+}
+
+.fc-day-number {
+    font-size: 1em !important;
+}
+
+.fc-state-disabled {
+    background-color: #4e73df;
+    color: #fefefe;
+    opacity: 1; 
+}
+
+.fc-toolbar .fc-state-active {
+    background-color: #4e73df;
+    color: #fefefe;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .fc-scroller.fc-day-grid-container {
+        overflow: hidden scroll !important;
+        height: 55vh !important;
+    }
+    
+    .fc-day-number {
+        font-size: 0.6em !important;
+    }
+
+    .fc-center {
+        margin-top: 20px;
+    }
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .modal-contentCalendar {
+        width: 90%;
+    }
+
+    .buttonOptions-container button {
+        margin: 0px 0px 15px 0px; 
+    }
+    
+    .intervalMinute {
+        margin-top: 0px;
+    }
+
+    #tablaTurnosPacientesCalendar thead tr th {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    #tablaTurnosPacientesCalendar tbody tr td {
+        text-align: center;
+        padding: 7px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* white-space: nowrap; */
+    }
+
+    .intervalModalContent {
+        width: 80%;
+    }
+
+    .reference-container {
+        margin-left: 25px;
+        flex-wrap: wrap;
+    }
+
+    .state {
+        margin-bottom: 10px;
+    }
+
+    .color-reference-appointment {
+       margin-bottom: 10px;
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    #tablaTurnosPacientesCalendar {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    #tablaTurnosPacientesCalendar thead {
+        display: none; /* Oculta el encabezado de la tabla en pantallas pequeñas */
+    }
+
+    #tablaTurnosPacientesCalendar tbody,
+    #tablaTurnosPacientesCalendar tr {
+        display: block;
+        margin-bottom: 1rem; /* Espacio entre tarjetas */
+    }
+
+    #tablaTurnosPacientesCalendar td {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border: 1px solid #ddd;
+        background-color: #f9f9f9;
+        margin-bottom: 0.5rem; /* Espacio entre tarjetas */
+        border-radius: 5px; /* Bordes redondeados para las tarjetas */
+    }
+
+    #tablaTurnosPacientesCalendar td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    /* Aplicar las clases de estado a cada celda en la vista móvil */
+    #tablaTurnosPacientesCalendar .disponible {
+        background-color: white !important;
+    }
+
+    #tablaTurnosPacientesCalendar .no-disponible {
+        background-color: #ffcccc !important;
+    }
+
+    #tablaTurnosPacientesCalendar .turno-usuario {
+        background-color: #e0e0e0 !important;
+    }
+
+    #tablaTurnosPacientesCalendar .blocked {
+        background-color: #f2f2f2 !important;
+        opacity: 0.5 !important;
+    }
+}

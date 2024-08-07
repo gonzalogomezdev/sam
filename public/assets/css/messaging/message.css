@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#messageContent {
+    margin: 0 auto;
+    width: 90%;
+    padding: 20px 0px 20px 0px;
+    /* border: 3px solid green; */
+}
+
+.messages.container-messages {
+    background: rgb(255, 255, 255);
+    display: flex;
+    height: 70vh;
+    padding: 20px 0px 10px 0px;
+    /* border: 2px solid violet; */
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.first-column {
+    width: 40%;
+    height: 100%;
+    padding: 10px;
+    border-right: 1px solid #dee2e6 !important;
+    /* border: 1px solid green; */
+}
+
+.second-column {
+    width: 60%;
+    height: 100%;
+    padding: 0px 6px;
+    /* border: 2px solid red; */
+}
+
+.first-column .input-search {
+    text-align: center;
+    /* border: 1px solid blue; */
+}
+
+.first-column .input-search #searchInput{
+    width: 80%;
+	border: 1px solid #ccc;
+    border-radius: 100px;
+    padding: 2px 0px 2px 10px;
+    outline: none;
+}
+
+.list-users {
+    margin: 20px 0px 0px 0px;
+    overflow-y: auto;
+	overflow-x: hidden;
+	height: 85%;
+    /* border: 1px solid red; */
+}
+
+.list-users ul {
+    margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.list-users ul li {
+    list-style: none;
+    /* border: 1px solid blue; */
+}
+
+.list-users ul li a {
+	display: flex;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	cursor: pointer;
+	margin: 15px 0px 15px 0px;
+	/* border: 1px solid black; */
+}
+
+.user-img {
+	width: 4rem;
+	min-width: 4rem;
+	margin: 0px 10px 0px 10px;
+	overflow: hidden;
+	/* border: 1px solid green; */
+}
+
+.user-img img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.user-message span {
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	/* border: 1px solid violet; */
+}
+
+.user-message p {
+	width: 70%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin: 0px 5px 0px 5px;
+	color: rgb(150, 150, 150);
+	/* border: 1px solid yellowgreen; */
+}
+
+
+/* .bottom {
+    border: 1px solid red;
+} */
+
+.bottom button {
+    width: 6%;
+    height: 6vh;
+    background: #4169E1;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+}
+
+.second-column .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.second-column .header h4 {
+    color: rgb(35, 33, 33);
+}
+
+.second-column .header #closeChatButton {
+    border: none;
+    background: none;
+    margin: 0px 10px 10px 0px;
+}
+
+.second-column .messages {
+    height: calc(100% - 30%);
+    /* margin-top: 8vh; */
+    overflow-y: auto;
+	overflow-x: hidden;
+    padding: 5px;
+    /* border: 1px solid blue; */
+}
+
+.second-column #messageForm {
+    display: none;
+    /* border: 1px solid red; */
+}
+
+form #message {
+    width: 90%;
+    height: 11vh;
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    overflow-y: auto;
+    resize: none;
+    /* border: 1px solid blue; */
+}
+
+/* ------- */
+.message.left {
+    width: 100%; 
+    display: flex;
+    margin-bottom: 15px;
+    /* border: 1px solid green; */
+}
+.meta.left {
+    font-size: 12px;
+    color: #999;
+    margin-right: 5px;
+    /* border: 1px solid blue; */
+}
+.text.left {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    color: rgb(35, 33, 33);
+    /* border: 1px solid blue; */
+}
+
+.message.right {
+    width: 100%; 
+    display: flex;
+    margin-bottom: 15px;
+    flex-direction: row-reverse;
+    /* border: 1px solid red; */
+}
+.meta.right {
+    font-size: 12px;
+    color: #999;
+    margin-right: 5px;
+    margin-left: 5px;
+    /* border: 1px solid blue; */
+}
+.text.right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    color: rgb(255, 255, 255);
+    /* border: 1px solid blue; */
+}
+
+.bubble.left {
+    background-color: #e8f0f8;
+    border-radius: 20px;
+    padding: 8px 12px;
+    max-width: 60%; /* Ajusta el ancho máximo de la burbuja */
+    word-wrap: break-word;
+    position: relative; 
+    /* border: 1px solid blue; */
+}
+.bubble.left:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #e8f0f8;
+    border-bottom-right-radius: 20px;
+    bottom: -7px;
+}
+.bubble.right {
+    background-color: #4169E1;
+    border-radius: 20px;
+    padding: 8px 12px;
+    max-width: 60%; /* Ajusta el ancho máximo de la burbuja */
+    word-wrap: break-word;
+    position: relative; 
+    /* border: 1px solid blue; */
+}
+.bubble.right:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #4e73df;
+    border-bottom-left-radius: 20px;
+    bottom: -7px;
+    right: 7px;
+}
+
+.noMessages {
+    padding: 10px;
+}
+
+/* ------- */
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .first-column {
+        width: 100%;
+    }
+
+    .user-message p {
+        width: 50%;
+    }
+
+    .second-column {
+        display: none; /* Ocultamos la columna de chat inicialmente */
+    }
+
+    .second-column.active {
+        width: 100%;
+        display: block; /* Mostramos el chat cuando está activo */
+    }
+
+    #messageForm {
+        width: 98%;
+    }
+
+    .bottom button {
+        width: 12%;
+    }
+}
